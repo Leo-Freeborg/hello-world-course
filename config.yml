@@ -1,0 +1,18 @@
+title: hello-world
+description: >-
+  This is my first and NEW repository. I don't really know what that entails,
+  but I am interacting with Github. Let's see how it goes!
+template:
+  repo: hello-world-template
+  name: hello-world
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
